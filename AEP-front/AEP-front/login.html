@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Plataforma Local</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Bem-vindo à Plataforma Local</h1>
+  </header>
+
+  <main class="login-container">
+    <div class="card-login">
+      <h2>Entrar</h2>
+      <form id="formLogin">
+        <input type="email" id="emailLogin" placeholder="E-mail" required>
+        <input type="password" id="senhaLogin" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <p>Não tem conta? <a href="#" id="mostrarCadastro">Cadastre-se</a></p>
+    </div>
+
+    <div class="card-login hidden" id="cadastroContainer">
+      <h2>Criar Conta</h2>
+      <form id="formCadastroUser">
+        <input type="text" id="nomeCadastro" placeholder="Nome de usuário" required>
+        <input type="email" id="emailCadastro" placeholder="E-mail" required>
+        <input type="password" id="senhaCadastro" placeholder="Senha" required>
+        <button type="submit">Cadastrar</button>
+      </form>
+
+      <p>Já tem conta? <a href="#" id="mostrarLogin">Voltar ao Login</a></p>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

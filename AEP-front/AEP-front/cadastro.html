@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Empreendedor</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastrar Produto ou Serviço</h1>
+    <nav>
+      <a href="index.html">Voltar</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="formCadastro">
+      <input type="hidden" id="idEmpreendedor">
+      <input type="text" id="nomeEmpreendedor" placeholder="Nome do Empreendedor" required>
+      <select id="tipo">
+        <option value="Produto">Produto</option>
+        <option value="Serviço">Serviço</option>
+      </select>
+      <input type="text" id="item" placeholder="Nome do Produto/Serviço" required>
+      <input type="text" id="categoria" placeholder="Categoria" required>
+      <textarea id="descricao" placeholder="Descrição" required></textarea>
+      <input type="text" id="preco" placeholder="Preço (opcional)">
+      <input type="text" id="cidade" placeholder="Cidade" required>
+      <input type="text" id="imagem" placeholder="URL da Imagem (opcional)">
+      <button type="submit">Salvar</button>
+    </form>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Plataforma Local</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+  <header>
+    <h1>Plataforma de Apoio a Pequenos Empreendedores</h1>
+    <nav>
+      <a href="cadastro.html">Cadastrar Novo</a>
+    </nav>
+  </header>
+
+  <section class="busca">
+    <input type="text" id="busca" placeholder="Buscar por nome, cidade ou categoria...">
+  </section>
+
+  <main id="listaEmpreendedores"></main>
+
+  <!-- Modal de Contato -->
+  <div id="modalContato" class="modal">
+    <div class="modal-content">
+      <span id="fecharModal">&times;</span>
+      <h2>Entrar em Contato</h2>
+      <form id="formContato">
+        <input type="text" id="nomeContato" placeholder="Seu nome" required>
+        <input type="email" id="emailContato" placeholder="Seu e-mail" required>
+        <textarea id="mensagemContato" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="mensagemSucesso" class="fade">Contato enviado com sucesso!</p>
+    </div>
+  </div>
+
+  <script>
+    // Bloqueia acesso se não estiver logado
+    const user = sessionStorage.getItem("usuarioLogado");
+    if (!user) {
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <script src="js/storage.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
